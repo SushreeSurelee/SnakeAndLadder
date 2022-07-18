@@ -38,7 +38,7 @@ namespace SnakeAndLadder
             string[] chooseOption = { "Snake", "Ladder", "Noplay" };
 
             int positionReched = START_POSITION;
-
+            int count = 0;
             while (positionReched != END_POSITION)
             {
                 if (positionReched < START_POSITION)
@@ -60,11 +60,12 @@ namespace SnakeAndLadder
                    
                 }
                 Console.WriteLine("Dice Position after the dice roll is:" + positionReched);
-                
-                
+
+                count++;
             }
-            Console.WriteLine("you have reached to :" + positionReched +"\n ***You Won***");
             
+            Console.WriteLine("you have reached to :" + positionReched +"\n ***You Won***");
+            Console.WriteLine("You have taken " + count + " turns to win the game.");
 
             Console.ReadLine();
         }
