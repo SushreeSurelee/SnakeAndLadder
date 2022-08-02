@@ -19,7 +19,6 @@ namespace SnakeAndLadder
             }
             return CheckEndPosition(dicePostion, endPosition, diceRoll);
         }
-
         static int CheckEndPosition(int playerPositionReached, int END_POSITION, int playerDiceRoll)
         {
             if (playerPositionReached > END_POSITION)
@@ -31,7 +30,7 @@ namespace SnakeAndLadder
         static void Main(string[] args)
         {
             int START_POSITION = 0;
-            int END_POSITION = 10;
+            int END_POSITION = 100;
             Random random = new Random();
             Console.WriteLine("Welcome to Snake and Ladder Game \n");
 
@@ -53,12 +52,10 @@ namespace SnakeAndLadder
                 
                 int player1DiceRoll = random.Next(1, 7);
                 Console.WriteLine("Player 1 dice value is :" + player1DiceRoll );
-
                 int player1_Option = random.Next(0, 3);
                 
                 int player2DiceRoll = random.Next(1, 7);
                 Console.WriteLine("Player 2 dice value is :" + player2DiceRoll + "\n");
-
                 int player2_Option = random.Next(0, 3);
                 
                 if (player1_Option == 1)
@@ -85,7 +82,6 @@ namespace SnakeAndLadder
                     playerTwoPositionReached = PlayOptions(player2DiceRoll, playerTwoPositionReached, player2_Option, END_POSITION);
                     Console.WriteLine("Position reached by player 2 after dice roll: " + playerTwoPositionReached + "\n");
                 }
-
                 if (playerOnePositionReached == END_POSITION)
                 {
                     Console.WriteLine("Player 1 have reached to :" + playerOnePositionReached + "\n ***PLAYER 1 WON THE GAME***");
@@ -96,7 +92,6 @@ namespace SnakeAndLadder
                     Console.WriteLine("Player 2 have reached to :" + playerTwoPositionReached + "\n ***PLAYER 2 WON THE GAME***");
                     break;
                 }
-
             }
             Console.ReadLine();
         }
